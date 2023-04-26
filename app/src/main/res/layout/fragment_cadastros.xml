@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.dashboard.DashboardFragment">
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.cadastros.CadastrosFragment">
 
     <TextView
-        android:id="@+id/text_dashboard"
+        android:id="@+id/text_cadastros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
