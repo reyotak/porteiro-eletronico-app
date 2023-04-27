@@ -1,16 +1,16 @@
-package com.example.porteiroeletronico.ui.home;
+package com.example.porteiroeletronico.ui.cadastros;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class CadastrosViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public CadastrosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("Cadastrar novo acesso para");
     }
 
     public LiveData<String> getText() {

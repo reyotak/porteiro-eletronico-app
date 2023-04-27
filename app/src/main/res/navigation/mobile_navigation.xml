@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_acessos">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.example.porteiroeletronico.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_acessos"
+        android:name="com.example.porteiroeletronico.ui.acessos.AcessosFragment"
+        android:label="@string/title_acessos"
+        tools:layout="@layout/fragment_acessos" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.porteiroeletronico.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_cadastros"
+        android:name="com.example.porteiroeletronico.ui.cadastros.CadastrosFragment"
+        android:label="@string/title_cadastros"
+        tools:layout="@layout/fragment_cadastros" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.porteiroeletronico.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_unidade"
+        android:name="com.example.porteiroeletronico.ui.unidade.UnidadeFragment"
+        android:label="@string/title_unidade"
+        tools:layout="@layout/fragment_unidade" />
 </navigation>

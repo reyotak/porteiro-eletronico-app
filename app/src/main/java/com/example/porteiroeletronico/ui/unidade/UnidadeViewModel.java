@@ -1,16 +1,16 @@
-package com.example.porteiroeletronico.ui.notifications;
+package com.example.porteiroeletronico.ui.unidade;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class NotificationsViewModel extends ViewModel {
+public class UnidadeViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public NotificationsViewModel() {
+    public UnidadeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is notifications fragment");
+        mText.setValue("Informações da Unidade");
     }
 
     public LiveData<String> getText() {

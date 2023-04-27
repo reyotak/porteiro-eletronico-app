@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop ="?attr/actionBarSize"
+    android:orientation="vertical"
+    tools:context=".ui.acessos.AcessosFragment">
+
+    <TextView
+        android:id="@+id/text_acessos"
+        android:layout_width="match_parent"
+        android:layout_height="24sp"
+        android:textSize="16sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:typeface="sans"
+        android:textColor="@color/m3_white"
+        android:background="@color/m3_primary_30"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:background="@color/m3_primary_30"
+        android:layout_height="312dp"/>
+
+</LinearLayout>

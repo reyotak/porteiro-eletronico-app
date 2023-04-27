@@ -1,4 +1,4 @@
-package com.example.porteiroeletronico.ui.home;
+package com.example.porteiroeletronico.ui.cadastros;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.porteiroeletronico.databinding.FragmentHomeBinding;
+import com.example.porteiroeletronico.databinding.FragmentCadastrosBinding;
 
-public class HomeFragment extends Fragment {
+public class CadastrosFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentCadastrosBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        HomeViewModel homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        CadastrosViewModel cadastrosViewModel =
+                new ViewModelProvider(this).get(CadastrosViewModel.class);
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentCadastrosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textCadastros;
+        cadastrosViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

@@ -17,11 +17,16 @@ public class TutorialActivity extends AppCompatActivity {
 
         Intent activityIntent;
 
+        /*
+        * ignore the login activity for now
         if (isLogged()) {
             activityIntent = new Intent(this, MainActivity.class);
         } else {
             activityIntent = new Intent(this, LoginActivity.class);
         }
+        */
+
+        activityIntent = new Intent(this, MainActivity.class);
 
         startActivity(activityIntent);
         finish();
