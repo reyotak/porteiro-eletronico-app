@@ -10,7 +10,7 @@ public class CadastrosViewModel extends ViewModel {
 
     public CadastrosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is cadastros fragment");
+        mText.setValue("Cadastrar novo acesso para");
     }
 
     public LiveData<String> getText() {

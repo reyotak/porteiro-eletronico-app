@@ -10,7 +10,7 @@ public class UnidadeViewModel extends ViewModel {
 
     public UnidadeViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is unidade fragment");
+        mText.setValue("Informações da Unidade");
     }
 
     public LiveData<String> getText() {

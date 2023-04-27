@@ -10,7 +10,7 @@ public class AcessosViewModel extends ViewModel {
 
     public AcessosViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is acessos fragment");
+        mText.setValue("Solicitações Abertas");
     }
 
     public LiveData<String> getText() {
