@@ -11,11 +11,9 @@ O App atual possui um SDK minimo 19 o que corresponde a versão **4.4 KitKat** d
 
 Para rodar o aplicativo existem duas opções: executar em um [emulador](https://developer.android.com/studio/run/emulator?hl=pt-br) o que costuma demandar bastante RAM/Disco/CPU, ou em um [hardware físico](https://developer.android.com/studio/run/device?hl=pt-br)  o que particularmente recomendo . Em ambos os casos basta clicar no botão **Run app** do Android Studio.
 
-## Telas
-<img src="https://i.imgur.com/KHS1XMK.jpeg" width="200">
+## Telas no momento
 <p float="left">
-<img src="https://i.imgur.com/0ImP7qa.jpeg" width="200">
-<img src="https://i.imgur.com/jfw6ee6.jpeg" width="200">
-<img src="https://i.imgur.com/xVaJxil.jpeg" width="200">
+<img src="https://i.imgur.com/9gofs4n.jpg" width="200">
+<img src="https://i.imgur.com/l2hLSr9.jpg" width="200">
+<img src="https://i.imgur.com/DqEFsH0.jpg" width="200">
 </p>
-Obs: A tela de tutorial ainda não possui uma interface.
