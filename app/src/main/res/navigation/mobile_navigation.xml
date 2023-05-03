@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_acessos"
-        android:name="com.example.porteiroeletronico.ui.acessos.AcessosFragment"
+        android:name="com.example.porteiroeletronico.main.acessos.AcessosFragment"
         android:label="@string/title_acessos"
         tools:layout="@layout/fragment_acessos" />
 
     <fragment
         android:id="@+id/navigation_cadastros"
-        android:name="com.example.porteiroeletronico.ui.cadastros.CadastrosFragment"
+        android:name="com.example.porteiroeletronico.main.cadastros.CadastrosFragment"
         android:label="@string/title_cadastros"
         tools:layout="@layout/fragment_cadastros" />
 
     <fragment
         android:id="@+id/navigation_unidade"
-        android:name="com.example.porteiroeletronico.ui.unidade.UnidadeFragment"
+        android:name="com.example.porteiroeletronico.main.unidade.UnidadeFragment"
         android:label="@string/title_unidade"
         tools:layout="@layout/fragment_unidade" />
 </navigation>

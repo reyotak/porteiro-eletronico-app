@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".ui.cadastros.CadastrosFragment">
+    tools:context=".main.cadastros.CadastrosFragment">
 
     <TextView
         android:background="@color/m3_primary_30"
@@ -21,10 +21,18 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:background="@color/m3_primary_30"
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_view_novo_cadastro"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         app:layoutManager="LinearLayoutManager"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/m3_white"
+        android:id="@+id/recycler_view_cadastrados"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
 </LinearLayout>
