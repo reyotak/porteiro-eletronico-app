@@ -1,4 +1,4 @@
-package com.example.porteiroeletronico.ui.cadastros;
+package com.example.porteiroeletronico.ui.cadastros.model;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

@@ -2,19 +2,29 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
     android:paddingTop="?attr/actionBarSize"
     tools:context=".ui.cadastros.CadastrosFragment">
 
     <TextView
+        android:background="@color/m3_primary_30"
         android:id="@+id/text_cadastros"
-        android:layout_width="match_parent"
         android:layout_height="24sp"
-        android:textSize="16sp"
-        android:paddingStart="16dp"
+        android:layout_width="match_parent"
         android:paddingEnd="16dp"
-        android:typeface="sans"
+        android:paddingStart="16dp"
         android:textColor="@color/m3_white"
-        android:background="@color/m3_primary_30"/>
+        android:textSize="16sp"
+        android:typeface="sans"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/m3_primary_30"
+        android:id="@+id/recycler_view"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layoutManager="LinearLayoutManager"/>
+
 </LinearLayout>
