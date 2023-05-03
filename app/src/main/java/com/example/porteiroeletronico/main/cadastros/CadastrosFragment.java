@@ -9,11 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.porteiroeletronico.R;
 import com.example.porteiroeletronico.databinding.FragmentCadastrosBinding;
+import com.example.porteiroeletronico.main.cadastros.adapter.CadastradoCardAdaptor;
 import com.example.porteiroeletronico.main.cadastros.adapter.NovoCadastroCardAdapter;
 import com.example.porteiroeletronico.main.cadastros.model.CadastrosViewModel;
 
@@ -29,16 +31,17 @@ public class CadastrosFragment extends Fragment {
         binding = FragmentCadastrosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // seta o texto abaixo da top bar
-        final TextView textView = binding.textCadastros;
-        cadastrosViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-
         // seta os cards dos novos cadastros
-        RecyclerView recyclerView = root.findViewById(R.id.recycler_view_novo_cadastro);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),
+        RecyclerView novoCadastrado = root.findViewById(R.id.recycler_view_novo_cadastro);
+        novoCadastrado.setLayoutManager(new LinearLayoutManager(getContext(),
                 RecyclerView.HORIZONTAL, false));
-        recyclerView.setAdapter(new NovoCadastroCardAdapter());
-        recyclerView.setHasFixedSize(true);
+        novoCadastrado.setAdapter(new NovoCadastroCardAdapter());
+        novoCadastrado.setHasFixedSize(true);
+
+        // seta os cards dos ja cadastrados
+        RecyclerView cadastrados = root.findViewById(R.id.recycler_view_cadastrados);
+        cadastrados.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        cadastrados.setAdapter(new CadastradoCardAdaptor());
 
         return root;
     }

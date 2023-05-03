@@ -15,17 +15,34 @@
         android:layout_width="match_parent"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
+        android:text="@string/top_bar_cadastros"
         android:textColor="@color/m3_white"
         android:textSize="16sp"
+        android:textStyle="bold"
         android:typeface="sans"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/card_novo_cadastro"
+        tools:itemCount="3"
         android:background="@color/m3_primary_30"
         android:id="@+id/recycler_view_novo_cadastro"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         app:layoutManager="LinearLayoutManager"/>
+
+    <TextView
+        android:background="@color/m3_white"
+        android:id="@+id/text_cadastrados"
+        android:layout_height="24sp"
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/submenu_cadastrados"
+        android:textColor="@color/m3_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:background="@color/m3_white"

@@ -19,11 +19,10 @@ class NovoCadastroCardAdapter : RecyclerView.Adapter<
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NovoCadastroCardViewHolder {
         //  criar o adaptador entre a ui e o codigo
         val adapterLayout = LayoutInflater.from(parent.context)
-            .inflate(R.layout.card_grid_cadastros, parent, false)
+            .inflate(R.layout.card_novo_cadastro, parent, false)
         return NovoCadastroCardViewHolder(adapterLayout)
     }
 
-    // o recycler view tem um tamanho fixo, entao precisa saber previamente
     override fun getItemCount() = listaTiposCadastros.size
 
     override fun onBindViewHolder(holder: NovoCadastroCardViewHolder, position: Int) {
