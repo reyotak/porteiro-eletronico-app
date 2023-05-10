@@ -23,6 +23,12 @@ public class CadastrosFragment extends Fragment {
 
     private FragmentCadastrosBinding binding;
 
+    public enum CadastroType {
+        PESSOA,
+        ADM,
+        VEICULO
+    }
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         CadastrosViewModel cadastrosViewModel =
@@ -38,10 +44,20 @@ public class CadastrosFragment extends Fragment {
         novoCadastrado.setAdapter(new NovoCadastroCardAdapter());
         novoCadastrado.setHasFixedSize(true);
 
-        // seta os cards dos ja cadastrados
-        RecyclerView cadastrados = root.findViewById(R.id.recycler_view_cadastrados);
-        cadastrados.setLayoutManager(new GridLayoutManager(getContext(), 2));
-        cadastrados.setAdapter(new CadastradoCardAdaptor());
+        // seta os cards das pessoas ja cadastradas
+        RecyclerView pessoasCadastradas = root.findViewById(R.id.recycler_view_pessoas_cadastradas);
+        pessoasCadastradas.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        pessoasCadastradas.setAdapter(new CadastradoCardAdaptor(CadastroType.PESSOA, getContext()));
+
+        // seta os cards dos adm ja cadastradas
+        RecyclerView admCadastrados = root.findViewById(R.id.recycler_view_adm_cadastrados);
+        admCadastrados.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        admCadastrados.setAdapter(new CadastradoCardAdaptor(CadastroType.ADM, getContext()));
+
+        // seta os cards dos veiculos ja cadastradas
+        RecyclerView veicCadastrados = root.findViewById(R.id.recycler_view_veiculos_cadastrados);
+        veicCadastrados.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        veicCadastrados.setAdapter(new CadastradoCardAdaptor(CadastroType.VEICULO, getContext()));
 
         return root;
     }

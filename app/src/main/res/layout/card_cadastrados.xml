@@ -7,7 +7,7 @@
     android:layout_height="72dp"
     android:layout_margin="8dp"
     app:cardElevation="4dp"
-    app:cardCornerRadius="4dp">
+    app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:background="@color/m3_white"
@@ -45,6 +45,7 @@
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:padding="0dp"
+            android:stateListAnimator="@null"
             android:text="@string/detalhes"
             android:textColor="@color/m3_primary_40"
             android:textSize="11sp"
@@ -52,7 +53,7 @@
             android:typeface="sans"
             app:backgroundTint="@color/m3_white"
             app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
-            app:layout_constraintTop_toBottomOf="@+id/nome_cadastrado" />
+            app:layout_constraintTop_toBottomOf="@+id/nome_cadastrado"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
