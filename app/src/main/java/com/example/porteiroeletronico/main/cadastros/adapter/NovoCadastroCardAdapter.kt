@@ -1,15 +1,21 @@
 package com.example.porteiroeletronico.main.cadastros.adapter
 
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.porteiroeletronico.R
+import com.example.porteiroeletronico.create.CreateCadastro
 import com.example.porteiroeletronico.main.cadastros.data.DataSourceTiposCadastros
 import com.google.android.material.button.MaterialButton
 
-class NovoCadastroCardAdapter : RecyclerView.Adapter<
+
+class NovoCadastroCardAdapter(val context : Context?) : RecyclerView.Adapter<
         NovoCadastroCardAdapter.NovoCadastroCardViewHolder>() {
 
     // inicializa os tipos de acordo com os tipos de cadastros existentes do DataSource
@@ -30,6 +36,13 @@ class NovoCadastroCardAdapter : RecyclerView.Adapter<
         val tipoCadastroData = listaTiposCadastros[position]
         holder.imageView?.setImageResource(tipoCadastroData.imageResourceId)
         holder.button?.text = tipoCadastroData.name
+        holder.button?.setOnClickListener {
+            if (context != null) {
+                val intent = Intent(context, CreateCadastro::class.java)
+                val bundle = Bundle()
+                startActivity(context, intent, bundle)
+            }
+        }
     }
 
     class NovoCadastroCardViewHolder(view: View?): RecyclerView.ViewHolder(view!!) {
