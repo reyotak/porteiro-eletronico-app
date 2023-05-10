@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".ui.unidade.UnidadeFragment">
+    tools:context=".main.unidade.UnidadeFragment">
 
     <TextView
         android:id="@+id/text_unidade"

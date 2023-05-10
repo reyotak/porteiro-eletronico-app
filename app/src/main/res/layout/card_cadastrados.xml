@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="168dp"
+    android:layout_height="72dp"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/m3_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tipo_cadastro_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            tools:text="@string/submenu_cadastrados"
+            android:background="@color/m3_white"
+            android:id="@+id/nome_cadastrado"
+            android:layout_height="20sp"
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detalhes_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:letterSpacing="-.01"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/detalhes"
+            android:textColor="@color/m3_primary_40"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:backgroundTint="@color/m3_white"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toBottomOf="@+id/nome_cadastrado"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

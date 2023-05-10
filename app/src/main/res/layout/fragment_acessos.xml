@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:paddingTop ="?attr/actionBarSize"
     android:orientation="vertical"
-    tools:context=".ui.acessos.AcessosFragment">
+    tools:context=".main.acessos.AcessosFragment">
 
     <TextView
         android:id="@+id/text_acessos"

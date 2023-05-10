@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="168dp"
+    android:layout_height="72dp"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@color/m3_primary_95"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="10dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/plus_card_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stateListAnimator="@null"
+        android:text="@string/plus"
+        android:textColor="@color/m3_primary_30"
+        android:textSize="20sp"
+        app:backgroundTint="@color/m3_primary_95"/>
+
+</com.google.android.material.card.MaterialCardView>

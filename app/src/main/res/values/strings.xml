@@ -13,4 +13,10 @@
     <string name="title_acessos">Acessos</string>
     <string name="title_cadastros">Cadastros</string>
     <string name="title_unidade">Unidade</string>
+    <string name="top_bar_cadastros">Cadastrar novo acesso para</string>
+    <string name="submenu_cadastrados">Cadastrados</string>
+    <string name="submenu_administradores">Administradores</string>
+    <string name="submenu_veiculos">Veiculos</string>
+    <string name="plus">+</string>
+    <string name="detalhes">Detalhes</string>
 </resources>

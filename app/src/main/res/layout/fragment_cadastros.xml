@@ -1,20 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
     android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".ui.cadastros.CadastrosFragment">
+    tools:context=".main.cadastros.CadastrosFragment">
 
     <TextView
+        android:background="@color/m3_primary_30"
         android:id="@+id/text_cadastros"
-        android:layout_width="match_parent"
         android:layout_height="24sp"
-        android:textSize="16sp"
-        android:paddingStart="16dp"
+        android:layout_width="match_parent"
         android:paddingEnd="16dp"
-        android:typeface="sans"
+        android:paddingStart="16dp"
+        android:text="@string/top_bar_cadastros"
         android:textColor="@color/m3_white"
-        android:background="@color/m3_primary_30"/>
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/card_novo_cadastro"
+        tools:itemCount="3"
+        android:background="@color/m3_primary_30"
+        android:id="@+id/recycler_view_novo_cadastro"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layoutManager="LinearLayoutManager"/>
+
+    <TextView
+        android:background="@color/m3_white"
+        android:id="@+id/text_cadastrados"
+        android:layout_height="24sp"
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/submenu_cadastrados"
+        android:textColor="@color/m3_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/m3_white"
+        android:id="@+id/recycler_view_pessoas_cadastradas"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    <TextView
+        android:background="@color/m3_white"
+        android:id="@+id/text_adm"
+        android:layout_height="24sp"
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/submenu_administradores"
+        android:textColor="@color/m3_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/m3_white"
+        android:id="@+id/recycler_view_adm_cadastrados"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+    <TextView
+        android:background="@color/m3_white"
+        android:id="@+id/text_veiculos"
+        android:layout_height="24sp"
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:text="@string/submenu_veiculos"
+        android:textColor="@color/m3_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:background="@color/m3_white"
+        android:id="@+id/recycler_view_veiculos_cadastrados"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="80dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+
+
 </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
