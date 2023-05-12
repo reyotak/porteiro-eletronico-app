@@ -13,7 +13,8 @@ Para rodar o aplicativo existem duas opções: executar em um [emulador](https:/
 
 ## Telas no momento
 <p float="left">
-<img src="https://i.imgur.com/9gofs4n.jpg" width="200">
-<img src="https://i.imgur.com/l2hLSr9.jpg" width="200">
-<img src="https://i.imgur.com/DqEFsH0.jpg" width="200">
+<img src="https://i.imgur.com/9HgeEGJ.jpg" width="200">
+<img src="https://i.imgur.com/8ix9HEa.jpg" width="200">
+<img src="https://i.imgur.com/KuOTdhP.jpg" width="200">
+<img src="https://i.imgur.com/DgXqx60.jpg" width="200">
 </p>
