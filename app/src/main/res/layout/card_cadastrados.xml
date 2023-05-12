@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:letterSpacing="-.01"
+            android:letterSpacing="0"
             android:minHeight="0dp"
             android:minWidth="0dp"
             android:padding="0dp"

@@ -10,4 +10,5 @@
     <color name="m3_sys_light_error">#DC362E</color>
     <color name="m3_black">#FF000000</color>
     <color name="m3_white">#FFFFFFFF</color>
+    <color name="m3_background">#50EADDFF</color>
 </resources>

@@ -34,16 +34,18 @@
         android:id="@+id/recycler_view_novo_cadastro"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:paddingBottom="16dp"
         android:orientation="horizontal"
         app:layoutManager="LinearLayoutManager"/>
 
     <TextView
         android:background="@color/m3_white"
         android:id="@+id/text_cadastrados"
-        android:layout_height="24sp"
+        android:layout_height="40sp"
         android:layout_width="match_parent"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
+        android:paddingTop="10dp"
         android:text="@string/submenu_cadastrados"
         android:textColor="@color/m3_black"
         android:textSize="16sp"
@@ -61,10 +63,11 @@
     <TextView
         android:background="@color/m3_white"
         android:id="@+id/text_adm"
-        android:layout_height="24sp"
+        android:layout_height="40sp"
         android:layout_width="match_parent"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
+        android:paddingTop="10dp"
         android:text="@string/submenu_administradores"
         android:textColor="@color/m3_black"
         android:textSize="16sp"
@@ -82,10 +85,11 @@
     <TextView
         android:background="@color/m3_white"
         android:id="@+id/text_veiculos"
-        android:layout_height="24sp"
+        android:layout_height="40sp"
         android:layout_width="match_parent"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
+        android:paddingTop="10dp"
         android:text="@string/submenu_veiculos"
         android:textColor="@color/m3_black"
         android:textSize="16sp"
@@ -98,7 +102,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="70dp"
+        android:paddingBottom="10dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 
 

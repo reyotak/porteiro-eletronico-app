@@ -59,6 +59,13 @@ class CadastradoCardAdaptor(val cadastroType : CadastrosViewModel.CadastroType,
                 val tipoCadastroData = dataList[position]
                 holder.imageView?.setImageResource(tipoCadastroData.imageResourceId)
                 holder.name?.text = tipoCadastroData.name
+                holder.detalhesButton?.setOnClickListener {
+                    if (context != null) {
+                        val intent = Intent(context, CreateCadastro::class.java)
+                        val bundle = Bundle()
+                        ContextCompat.startActivity(context, intent, bundle)
+                    }
+                }
             }
         }
     }
@@ -74,5 +81,6 @@ class CadastradoCardAdaptor(val cadastroType : CadastrosViewModel.CadastroType,
         val imageView: ImageView? = view!!.findViewById(R.id.tipo_cadastro_img)
         val name: TextView? = view!!.findViewById(R.id.nome_cadastrado)
         val button: MaterialButton? = view!!.findViewById(R.id.plus_card_button)
+        val detalhesButton: MaterialButton? = view!!.findViewById(R.id.detalhes_button)
     }
 }
