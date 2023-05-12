@@ -11,4 +11,5 @@
     <color name="m3_black">#FF000000</color>
     <color name="m3_white">#FFFFFFFF</color>
     <color name="m3_background">#50EADDFF</color>
+    <color name="m3_gray">#49454F</color>
 </resources>

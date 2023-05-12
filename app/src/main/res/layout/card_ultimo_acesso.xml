@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="328dp"
+    android:layout_height="88dp"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/m3_white"
+        android:layout_width="328dp"
+        android:layout_height="88dp">
+
+        <ImageView
+            android:id="@+id/tipo_cadastro_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            tools:text="@string/header"
+            android:id="@+id/header"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            tools:text="@string/subheader"
+            android:id="@+id/subhead"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_gray"
+            android:textSize="12sp"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+        <TextView
+            tools:text="@string/trailing"
+            android:id="@+id/trailing"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_gray"
+            android:textSize="11sp"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toBottomOf="@+id/subhead"/>
+
+        <TextView
+            tools:text="@string/date_example"
+            android:id="@+id/date"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="260dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_gray"
+            android:textSize="11sp"
+            android:typeface="sans"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/header"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/detalhes"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/m3_primary_30"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="@string/detalhes"
+            android:textSize="11sp"
+            android:typeface="sans"
+            android:letterSpacing="-.05"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            app:backgroundTint="@color/m3_white"
+            app:layout_constraintEnd_toEndOf="@+id/date"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="296dp"
+    android:layout_height="88dp"
+    android:layout_margin="8dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/m3_white"
+        android:layout_width="296dp"
+        android:layout_height="88dp">
+
+        <ImageView
+            android:id="@+id/tipo_cadastro_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            tools:text="@string/header"
+            android:id="@+id/header"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toTopOf="@id/tipo_cadastro_img"/>
+
+        <TextView
+            tools:text="@string/subheader"
+            android:id="@+id/subhead"
+            android:layout_height="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_width="wrap_content"
+            android:textColor="@color/m3_gray"
+            android:textSize="12sp"
+            android:typeface="sans"
+            app:layout_constraintStart_toEndOf="@+id/tipo_cadastro_img"
+            app:layout_constraintTop_toBottomOf="@+id/header"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/editar"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/m3_primary_30"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="@string/editar"
+            android:textSize="14sp"
+            android:typeface="sans"
+            android:letterSpacing="-.01"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:stateListAnimator="@null"
+            app:backgroundTint="@color/m3_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tipo_cadastro_img"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

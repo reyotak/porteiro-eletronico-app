@@ -55,12 +55,14 @@
         android:typeface="sans"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/card_programado"
+        tools:itemCount="3"
         android:background="@color/m3_white"
-        android:id="@+id/recycler_view_pessoas_cadastradas"
-        android:layout_height="120dp"
+        android:id="@+id/recycler_view_programados"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+        android:orientation="horizontal"
+        app:layoutManager="LinearLayoutManager"/>
 
     <TextView
         android:background="@color/m3_white"
@@ -77,15 +79,16 @@
         android:typeface="sans"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/card_ultimo_acesso"
+        tools:itemCount="3"
         android:background="@color/m3_white"
-        android:id="@+id/recycler_view_veiculos_cadastrados"
-        android:layout_height="400dp"
+        android:id="@+id/recycler_view_ultimos_acessos"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_marginBottom="70dp"
         android:paddingBottom="10dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
-
+        app:layoutManager="LinearLayoutManager"/>
 </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

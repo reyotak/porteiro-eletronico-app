@@ -47,6 +47,7 @@
             android:padding="0dp"
             android:stateListAnimator="@null"
             android:text="@string/detalhes"
+            android:textAllCaps="false"
             android:textColor="@color/m3_primary_40"
             android:textSize="11sp"
             android:textStyle="bold"

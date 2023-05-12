@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.porteiroeletronico.R;
 import com.example.porteiroeletronico.databinding.FragmentAcessosBinding;
+import com.example.porteiroeletronico.main.acessos.adapter.ProgramadoCardAdaptor;
 import com.example.porteiroeletronico.main.acessos.adapter.SolicitacaoAbertaAdaptor;
+import com.example.porteiroeletronico.main.acessos.adapter.UltimoAcessoCardAdaptor;
 import com.example.porteiroeletronico.main.cadastros.adapter.NovoCadastroCardAdapter;
 
 public class AcessosFragment extends Fragment {
@@ -33,6 +35,20 @@ public class AcessosFragment extends Fragment {
         solicitacoesAbertas.setLayoutManager(new LinearLayoutManager(getContext(),
                 RecyclerView.HORIZONTAL, false));
         solicitacoesAbertas.setAdapter(new SolicitacaoAbertaAdaptor(getContext()));
+
+        // seta os cards de programados
+        RecyclerView programados =
+                root.findViewById(R.id.recycler_view_programados);
+        programados.setLayoutManager(new LinearLayoutManager(getContext(),
+                RecyclerView.HORIZONTAL, false));
+        programados.setAdapter(new ProgramadoCardAdaptor(getContext()));
+
+        // seta os cards de ultimos acessos
+        RecyclerView ultimosAcessos =
+                root.findViewById(R.id.recycler_view_ultimos_acessos);
+        ultimosAcessos.setLayoutManager(new LinearLayoutManager(getContext(),
+                RecyclerView.VERTICAL, false));
+        ultimosAcessos.setAdapter(new UltimoAcessoCardAdaptor(getContext()));
 
         return root;
     }
