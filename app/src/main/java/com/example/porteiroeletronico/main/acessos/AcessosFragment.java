@@ -9,8 +9,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.porteiroeletronico.R;
 import com.example.porteiroeletronico.databinding.FragmentAcessosBinding;
+import com.example.porteiroeletronico.main.acessos.adapter.SolicitacaoAbertaAdaptor;
+import com.example.porteiroeletronico.main.cadastros.adapter.NovoCadastroCardAdapter;
 
 public class AcessosFragment extends Fragment {
 
@@ -18,14 +23,17 @@ public class AcessosFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        AcessosViewModel acessosViewModel =
-                new ViewModelProvider(this).get(AcessosViewModel.class);
 
         binding = FragmentAcessosBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textAcessos;
-        acessosViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // seta os cards de solicitacoes abertas
+        RecyclerView solicitacoesAbertas =
+                root.findViewById(R.id.recycler_view_solicitacoes_abertas);
+        solicitacoesAbertas.setLayoutManager(new LinearLayoutManager(getContext(),
+                RecyclerView.HORIZONTAL, false));
+        solicitacoesAbertas.setAdapter(new SolicitacaoAbertaAdaptor(getContext()));
+
         return root;
     }
 

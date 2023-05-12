@@ -19,4 +19,12 @@
     <string name="submenu_veiculos">Veiculos</string>
     <string name="plus">+</string>
     <string name="detalhes">Detalhes</string>
+    <string name="header">Header</string>
+    <string name="subheader">SubHeader</string>
+    <string name="trailing">Trailing</string>
+    <string name="aprovar">Aprovar</string>
+    <string name="mais_detalhes">Mais Detalhes</string>
+    <string name="top_bar_acessos">Solicitações Abertas</string>
+    <string name="programados">Programados</string>
+    <string name="ultimos_acessos">Últimos Acessos</string>
 </resources>

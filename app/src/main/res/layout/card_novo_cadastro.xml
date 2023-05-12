@@ -32,8 +32,10 @@
             android:textColor="@color/m3_white"
             android:textSize="14sp"
             android:typeface="sans"
+            android:letterSpacing="0"
+            android:textAllCaps="false"
             app:cornerRadius="100dp"
-            app:backgroundTint="@color/m3_primary_50"
+            app:backgroundTint="@color/m3_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/novo_cadastro_img" />

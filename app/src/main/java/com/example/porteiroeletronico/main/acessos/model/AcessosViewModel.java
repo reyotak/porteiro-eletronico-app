@@ -1,4 +1,4 @@
-package com.example.porteiroeletronico.main.acessos;
+package com.example.porteiroeletronico.main.acessos.model;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
