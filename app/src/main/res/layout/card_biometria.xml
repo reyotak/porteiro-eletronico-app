@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="20dp"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon_biometria"
+        android:src="@drawable/baseline_fingerprint_24"
+        android:layout_gravity="center_vertical"
+        app:tint="@color/m3_black" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="60"
+        android:paddingLeft="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_biometria"
+            android:textColor="@color/m3_black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="@string/biometria" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_usar_biometria"
+            android:textSize="12sp"
+            android:textColor="@color/m3_black"
+            android:text="@string/usar_biometria" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switch_biometria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:thumbTint="@color/m3_white"
+        android:trackTint="@color/m3_primary_30"/>
+
+</LinearLayout>
