@@ -1,20 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize"
-    tools:context=".main.unidade.UnidadeFragment">
+    android:background="@color/m3_white" >
 
-    <TextView
-        android:id="@+id/text_unidade"
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="24sp"
-        android:textSize="16sp"
-        android:paddingStart="16dp"
+        android:orientation="vertical"
+        tools:context=".main.unidade.UnidadeFragment">
+
+        <TextView
+            android:id="@+id/text_unidade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/m3_primary_30"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            android:text="@string/title_unidade"
+            android:textColor="@color/m3_white"
+            android:textSize="16sp"
+            android:paddingTop="?attr/actionBarSize"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+        android:id="@+id/tv_contatos"
+        android:layout_height="40sp"
+        android:layout_width="match_parent"
         android:paddingEnd="16dp"
-        android:typeface="sans"
-        android:textColor="@color/m3_white"
-        android:background="@color/m3_primary_30"/>
-</LinearLayout>
+        android:paddingStart="16dp"
+        android:paddingTop="10dp"
+        android:text="@string/contatos"
+        android:textColor="@color/m3_black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="sans"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view_contatos"
+            tools:listitem="@layout/card_contatos"/>
+
+        <TextView
+            android:id="@+id/tv_seguranca"
+            android:layout_height="40sp"
+            android:layout_width="match_parent"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:text="@string/seguranca"
+            android:textColor="@color/m3_black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <include
+            layout="@layout/card_biometria" />
+
+        <include
+            layout="@layout/card_senha" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

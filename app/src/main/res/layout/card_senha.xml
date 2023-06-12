@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="20dp"
+    android:paddingHorizontal="16dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/icon_senha"
+        android:src="@drawable/baseline_password_24"
+        android:layout_gravity="center_vertical"
+        app:tint="@color/m3_black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_alterar_senha"
+        android:text="@string/alterar_senha"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/m3_black"
+        android:paddingLeft="16dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="50" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_senha"
+        android:background="@drawable/rounded_corners"
+        android:src="@drawable/baseline_arrow_forward_ios_24"
+        android:tint="@color/m3_primary_30"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="8dp"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>
