@@ -16,7 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -26,10 +25,20 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.porteiroeletronico.login.api.LoginDataApi;
+import com.example.porteiroeletronico.login.api.LoginRequest;
+import com.example.porteiroeletronico.login.api.LoginResponse;
 import com.example.porteiroeletronico.main.MainActivity;
-import com.example.porteiroeletronico.tutorial.TutorialActivity;
 import com.example.porteiroeletronico.R;
 import com.example.porteiroeletronico.databinding.ActivityLoginBinding;
+
+import java.util.Objects;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -74,12 +83,6 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
                 loadingProgressBar.setVisibility(View.GONE);
-                if (loginResult.getError() != null) {
-                    showLoginFailed(loginResult.getError());
-                }
-                if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
-                }
                 setResult(Activity.RESULT_OK);
             }
         });
@@ -119,22 +122,49 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
-                        passwordEditText.getText().toString());
 
-                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(intent);
+                String username = usernameEditText.getText().toString();
+                String password = passwordEditText.getText().toString();
 
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl("http://192.168.65.100:8080")
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+                LoginDataApi loginDataApi = retrofit.create(LoginDataApi.class);
+                LoginRequest loginRequest = new LoginRequest(username, password);
+                Call<LoginResponse> call = loginDataApi.login(loginRequest);
+                call.enqueue(new Callback<LoginResponse>() {
+                    @Override
+                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                        loadingProgressBar.setVisibility(View.INVISIBLE);
+                        if (response.isSuccessful()) {
+                            LoginResponse loginResponse = response.body();
+                            if (Objects.equals(loginResponse.getUsername(), username)) {
+                                updateUiWithUser(username);
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                startActivity(intent);
+                            } else {
+                                showLoginFailed();
+                            }
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<LoginResponse> call, Throwable t) {
+                        loadingProgressBar.setVisibility(View.INVISIBLE);
+                        showLoginFailed();
+                    }
+                });
             }
         });
     }
 
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
+    private void updateUiWithUser(String username) {
+        String welcome = getString(R.string.welcome) + " " + username;
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
-    private void showLoginFailed(@StringRes Integer errorString) {
-        Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
+    private void showLoginFailed() {
+        String failed = "Dados inválidos";
+        Toast.makeText(getApplicationContext(), failed, Toast.LENGTH_LONG).show();
     }
 }
