@@ -45,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
 
+    private boolean failed = false;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,13 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (loginFormState == null) {
                     return;
                 }
-                loginButton.setEnabled(loginFormState.isDataValid());
-                if (loginFormState.getUsernameError() != null) {
-                    usernameEditText.setError(getString(loginFormState.getUsernameError()));
-                }
-                if (loginFormState.getPasswordError() != null) {
-                    passwordEditText.setError(getString(loginFormState.getPasswordError()));
-                }
+                loginButton.setEnabled(true);
             }
         });
 
@@ -139,21 +135,19 @@ public class LoginActivity extends AppCompatActivity {
                         loadingProgressBar.setVisibility(View.INVISIBLE);
                         if (response.isSuccessful()) {
                             LoginResponse loginResponse = response.body();
-                            if (Objects.equals(loginResponse.getUsername(), username)) {
-                                updateUiWithUser(username);
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                startActivity(intent);
-                            } else {
-                                showLoginFailed();
-                            }
+                            updateUiWithUser(username);
+                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                            startActivity(intent);
                         }
+                        showLoginFailed();
                     }
                     @Override
                     public void onFailure(Call<LoginResponse> call, Throwable t) {
                         loadingProgressBar.setVisibility(View.INVISIBLE);
-                        showLoginFailed();
+                        failed = true;
                     }
                 });
+                if (failed) showLoginFailed();
             }
         });
     }
