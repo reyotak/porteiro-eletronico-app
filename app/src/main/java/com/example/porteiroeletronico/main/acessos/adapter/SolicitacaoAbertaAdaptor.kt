@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.porteiroeletronico.R
 import com.example.porteiroeletronico.create.CreateCadastro
+import com.example.porteiroeletronico.main.MainActivity
 import com.example.porteiroeletronico.main.acessos.data.DataSourceSolicitacoesAbertas
 import com.google.android.material.button.MaterialButton
 
@@ -42,9 +43,12 @@ class SolicitacaoAbertaAdaptor(val context : Context?) : RecyclerView.Adapter<
         holder.imageView?.setImageResource(tipoCadastroData.imageResourceId)
         holder.aprovar?.setOnClickListener {
             if (context != null) {
-                val intent = Intent(context, CreateCadastro::class.java)
-                val bundle = Bundle()
-                startActivity(context, intent, bundle)
+                // Remover o item da lista de dados
+                listaTiposCadastros.removeAt(position);
+
+                // Notificar o adaptador sobre a remoção do item
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position, listaTiposCadastros.size);
             }
         }
         holder.detalhes?.setOnClickListener {

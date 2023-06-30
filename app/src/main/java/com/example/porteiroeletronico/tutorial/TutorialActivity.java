@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.porteiroeletronico.login.ui.LoginActivity;
 import com.example.porteiroeletronico.main.MainActivity;
 
 public class TutorialActivity extends AppCompatActivity {
@@ -16,16 +17,13 @@ public class TutorialActivity extends AppCompatActivity {
 
         Intent activityIntent;
 
-        /*
-        * ignore the login activity for now
+
+
         if (isLogged()) {
             activityIntent = new Intent(this, MainActivity.class);
         } else {
             activityIntent = new Intent(this, LoginActivity.class);
         }
-        */
-
-        activityIntent = new Intent(this, MainActivity.class);
 
         startActivity(activityIntent);
         finish();
