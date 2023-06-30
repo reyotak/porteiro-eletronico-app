@@ -1,5 +1,7 @@
 package com.example.porteiroeletronico.login.ui;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Activity;
 
 import androidx.lifecycle.Observer;
@@ -14,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -23,6 +26,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.porteiroeletronico.main.MainActivity;
 import com.example.porteiroeletronico.tutorial.TutorialActivity;
 import com.example.porteiroeletronico.R;
 import com.example.porteiroeletronico.databinding.ActivityLoginBinding;
@@ -77,11 +81,6 @@ public class LoginActivity extends AppCompatActivity {
                     updateUiWithUser(loginResult.getSuccess());
                 }
                 setResult(Activity.RESULT_OK);
-
-                // TODO: Hack to do the login just to launch the main activity
-                Intent myIntent = new Intent(LoginActivity.this, TutorialActivity.class);
-                myIntent.putExtra("logged", true); //Optional parameters
-                LoginActivity.this.startActivity(myIntent);
             }
         });
 
@@ -122,14 +121,16 @@ public class LoginActivity extends AppCompatActivity {
                 loadingProgressBar.setVisibility(View.VISIBLE);
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
-                // TODO: for now just launch the main activity
+
+                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
+
             }
         });
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
