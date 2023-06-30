@@ -37,4 +37,7 @@
     <string name="usar_biometria">Utilizar biometria do dispositivo</string>
     <string name="alterar_senha">Alterar senha</string>
     <string name="username">Username</string>
+    <string name="entrar">Entrar</string>
+    <string name="senha">Senha</string>
+    <string name="nome_de_usu_rio">Nome de Usuário</string>
 </resources>
